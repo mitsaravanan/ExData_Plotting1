@@ -13,7 +13,7 @@ powerdata <- load_data()
          #PLOT 1 - Global active power
          plot(powerdata$DateTime,powerdata$Global_active_power, type="l", xlab="", ylab="Global Active Power")
          
-		 #PLOT 2 - Voltage
+	 #PLOT 2 - Voltage
          plot(powerdata$DateTime,powerdata$Voltage, type="l", xlab="datetime", ylab="Voltage")
          
          #PLOT 3 - Energy sub metering.
@@ -21,12 +21,11 @@ powerdata <- load_data()
          lines(powerdata$DateTime,powerdata$Sub_metering_2,col="red")
          lines(powerdata$DateTime,powerdata$Sub_metering_3,col="blue")
          #Add a legend for the plot
-		 legend("topright", col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),lty=c(1,1), bty="n", cex=.9) #bty removes the box, cex shrinks the text, spacing added after labels so it renders correctly
+	 legend("topright", col=c("black","red","blue"), c("Sub_metering_1","Sub_metering_2", "Sub_metering_3"),lty=c(1,1), bty="n", cex=.9) 
          
          #PLOT 4 - Global_active_power
          plot(powerdata$DateTime,powerdata$Global_reactive_power, type="l", xlab="datetime", ylab="Global_reactive_power")
-         
-		 dev.off()
+         dev.off()
          
  }
  #Call the function to plot save it as png
